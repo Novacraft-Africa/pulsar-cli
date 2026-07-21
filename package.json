@@ -1,0 +1,19 @@
+{
+  "name": "@novacraft-engineering/pulsar-cli",
+  "version": "1.0.0",
+  "description": "Pulsar OTA release CLI — bundle, hash, and ship React Native updates over-the-air.",
+  "type": "module",
+  "bin": {"pulsar": "./pulsar.js"},
+  "files": ["pulsar.js", "hash.js", "README.md", "LICENSE"],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Novacraft-Africa/pulsar-cli.git"
+  },
+  "homepage": "https://pulsar.novacraft.africa",
+  "license": "MIT",
+  "author": "Novacraft Engineering",
+  "publishConfig": {"access": "public"},
+  "engines": {"node": ">=18"},
+  "scripts": {"test": "node test/hash.test.js"},
+  "keywords": ["react-native", "ota", "code-push", "pulsar", "cli", "release", "hot-update"]
+}

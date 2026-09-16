@@ -1,3 +1,5 @@
+<img src=".github/banner.png" alt="Pulsar CLI by Novacraft" width="100%">
+
 # @novacraft-engineering/pulsar-cli
 
 Release CLI for [Pulsar](https://pulsar.novacraft.africa) — bundle your React Native JavaScript, hash it exactly the way the client does, and ship it over-the-air.

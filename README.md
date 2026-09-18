@@ -12,6 +12,10 @@ npm i -g @novacraft-engineering/pulsar-cli
 npx @novacraft-engineering/pulsar-cli login https://api.usepulsar.dev
 ```
 
+`<apiUrl>` is whatever Pulsar server you release against. `api.usepulsar.dev`
+is the hosted one; point it at your own if you self-host. The CLI talks to the
+Pulsar API and nothing else, so it has no host compiled into it.
+
 ## Commands
 
 ```bash

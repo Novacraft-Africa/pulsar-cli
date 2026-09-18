@@ -1,6 +1,6 @@
 {
   "name": "@novacraft-engineering/pulsar-cli",
-  "version": "1.0.0",
+  "version": "1.2.2",
   "description": "Pulsar OTA release CLI — bundle, hash, and ship React Native updates over-the-air.",
   "type": "module",
   "bin": {"pulsar": "./pulsar.js"},

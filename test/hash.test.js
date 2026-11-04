@@ -1,11 +1,11 @@
 import assert from 'node:assert';
 import fs from 'node:fs';
-import os from 'node:os';
 import path from 'node:path';
 import {computePackageHash} from '../hash.js';
+import {makeTempDir} from '../temp.js';
 
 function makeTree(files) {
-  const root = fs.mkdtempSync(path.join(os.tmpdir(), 'pulsar-'));
+  const root = makeTempDir('pulsar-');
   for (const [relativePath, contents] of Object.entries(files)) {
     const full = path.join(root, relativePath);
     fs.mkdirSync(path.dirname(full), {recursive: true});

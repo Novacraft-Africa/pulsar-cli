@@ -13,7 +13,7 @@ function isIgnored(relativePath) {
   );
 }
 
-function walk(dir) {
+export function walk(dir) {
   const files = [];
   for (const entry of fs.readdirSync(dir, {withFileTypes: true})) {
     const full = path.join(dir, entry.name);
@@ -21,6 +21,17 @@ function walk(dir) {
     else if (entry.isFile()) files.push(full);
   }
   return files;
+}
+
+// Per-file sha256 map (relativePath -> hash), used to compute differential packages.
+export function fileHashes(contentsDir) {
+  const map = {};
+  for (const file of walk(contentsDir)) {
+    const relativePath = path.relative(contentsDir, file).split(path.sep).join('/');
+    if (isIgnored(relativePath)) continue;
+    map[relativePath] = sha256(fs.readFileSync(file));
+  }
+  return map;
 }
 
 // Matches @revopush/react-native-code-push CodePushUpdateUtils.computeFinalHashFromManifest:

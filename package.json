@@ -1,19 +1,50 @@
 {
   "name": "@novacraft-engineering/pulsar-cli",
-  "version": "1.2.2",
+  "version": "1.6.1",
   "description": "Pulsar OTA release CLI — bundle, hash, and ship React Native updates over-the-air.",
   "type": "module",
-  "bin": {"pulsar": "./pulsar.js"},
-  "files": ["pulsar.js", "hash.js", "README.md", "LICENSE"],
+  "bin": {
+    "pulsar": "./pulsar.js"
+  },
+  "files": [
+    "pulsar.js",
+    "hash.js",
+    "migrate.js",
+    "private.js",
+    "hermes.js",
+    "temp.js",
+    "envelope.js",
+    "releaseCompare.js",
+    "README.md",
+    "LICENSE"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Novacraft-Africa/pulsar-cli.git"
   },
-  "homepage": "https://pulsar.novacraft.africa",
+  "homepage": "https://usepulsar.dev",
   "license": "MIT",
   "author": "Novacraft Engineering",
-  "publishConfig": {"access": "public"},
-  "engines": {"node": ">=18"},
-  "scripts": {"test": "node test/hash.test.js"},
-  "keywords": ["react-native", "ota", "code-push", "pulsar", "cli", "release", "hot-update"]
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "test": "node test/hash.test.js && node test/security.test.js && node test/signing.test.js && node test/entry.test.js && node test/migrate.test.js && node test/connection.test.js"
+  },
+  "keywords": [
+    "cli",
+    "code-push",
+    "codepush-alternative",
+    "hot-update",
+    "ota",
+    "ota-updates",
+    "over-the-air",
+    "pulsar",
+    "react-native",
+    "react-native-ota",
+    "release"
+  ]
 }
